@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoFriendsView" customModule="KOKOFriends" customModuleProvider="target">
+            <connections>
+                <outlet property="addFriendBtn" destination="0Oh-7r-HlB" id="Brb-wC-AQH"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="UAS-8x-MW1"/>
+                <outlet property="setIDBtn" destination="11Q-np-YAc" id="1xn-yH-KEs"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="534"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="fzy-Ne-aRA">
+                    <rect key="frame" x="65" y="30" width="263" height="280"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imgFriendsEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="qmv-KR-D3T">
+                            <rect key="frame" x="9" y="0.0" width="245" height="172"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="qmv-KR-D3T" secondAttribute="height" multiplier="245:172" id="gTw-g4-XeO"/>
+                            </constraints>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="wtu-c8-1aX">
+                            <rect key="frame" x="30.333333333333329" y="213" width="202.66666666666669" height="67"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="就從加好友開始吧：）" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PV-6X-vRA">
+                                    <rect key="frame" x="8.3333333333333428" y="0.0" width="186" height="25.333333333333332"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
+                                    <color key="textColor" name="lightGrey"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqe-YC-saw">
+                                    <rect key="frame" x="0.0" y="33.333333333333314" width="202.66666666666666" height="33.666666666666657"/>
+                                    <string key="text">與好友們一起用 KOKO 聊起來！
+還能互相收付款、發紅包喔：）</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" name="lightGrey 2"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Oh-7r-HlB">
+                    <rect key="frame" x="100.66666666666669" y="355" width="192" height="40"/>
+                    <color key="backgroundColor" name="frogGreen"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="0Oh-7r-HlB" secondAttribute="height" multiplier="192:40" id="D5y-k2-7Di"/>
+                        <constraint firstAttribute="width" constant="192" id="Oai-7L-fvc"/>
+                        <constraint firstAttribute="height" constant="40" id="ZyG-ox-cVe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                    <color key="tintColor" name="frogGreen"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="加好友"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icAddFriendWhite" translatesAutoresizingMaskIntoConstraints="NO" id="exg-Zn-1IH">
+                    <rect key="frame" x="260.66666666666669" y="363" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="Mgu-eD-sVS"/>
+                        <constraint firstAttribute="width" constant="24" id="SUR-qC-jOa"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxe-0O-qIq">
+                    <rect key="frame" x="87.666666666666686" y="432" width="218" height="28"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="幫助好友更快找到你？ " lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngW-Iy-WFz">
+                            <rect key="frame" x="0.0" y="0.0" width="136" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" name="lightGrey 2"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11Q-np-YAc">
+                            <rect key="frame" x="136" y="0.0" width="82" height="28"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="設定 KOKO ID">
+                                <color key="titleColor" name="hotPink"/>
+                            </state>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="0Oh-7r-HlB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="78m-b7-S9Y"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fzy-Ne-aRA" secondAttribute="trailing" constant="65" id="A8j-3C-VPj"/>
+                <constraint firstItem="dxe-0O-qIq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="H93-F2-7Kn"/>
+                <constraint firstItem="exg-Zn-1IH" firstAttribute="centerY" secondItem="0Oh-7r-HlB" secondAttribute="centerY" id="KDL-dv-VIx"/>
+                <constraint firstItem="0Oh-7r-HlB" firstAttribute="top" secondItem="fzy-Ne-aRA" secondAttribute="bottom" constant="45" id="V1h-qo-hZc"/>
+                <constraint firstItem="dxe-0O-qIq" firstAttribute="top" secondItem="0Oh-7r-HlB" secondAttribute="bottom" constant="37" id="YJ6-Xe-Unc"/>
+                <constraint firstItem="fzy-Ne-aRA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="65" id="aeL-Qk-LgN"/>
+                <constraint firstItem="exg-Zn-1IH" firstAttribute="trailing" secondItem="0Oh-7r-HlB" secondAttribute="trailing" constant="-8" id="av9-lo-0w9"/>
+                <constraint firstItem="fzy-Ne-aRA" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="zMh-on-hSS"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="122.90076335877862" y="-123.23943661971832"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icAddFriendWhite" width="24" height="24"/>
+        <image name="imgFriendsEmpty" width="245" height="172"/>
+        <namedColor name="frogGreen">
+            <color red="0.33725490196078434" green="0.70196078431372544" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="hotPink">
+            <color red="0.92549019607843142" green="0.0" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrey">
+            <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrey 2">
+            <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
