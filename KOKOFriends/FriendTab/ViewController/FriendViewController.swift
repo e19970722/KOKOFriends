@@ -249,7 +249,6 @@ class FriendViewController: UIViewController {
         self.viewModel.$invitingFriends
             .sink { [weak self] returnedInvitingFriends in
             guard let self = self else { return }
-            // TODO: ⚠️ 更新 Flag
             let friendsCount = returnedInvitingFriends.count
             if friendsCount > 0 {
                 self.createfriendInvitationCard(invitingFriends: returnedInvitingFriends)
