@@ -116,7 +116,7 @@ class FriendViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        // ✅ 點入選擇發送不同狀態資訊
+        // 🟠 點入選擇發送不同狀態資訊
         self.fetchInfo()
     }
     
@@ -282,7 +282,7 @@ class FriendViewController: UIViewController {
     private func fetchInfo() {
         
         // 是否顯示無好友圖
-        self.isNoFriend = false
+        self.isNoFriend = true
         if self.isNoFriend {
             self.noFriendView.isHidden = false
             self.searchBarView.isHidden = true
@@ -299,7 +299,7 @@ class FriendViewController: UIViewController {
         self.input.send(.fetchMainInfo)
         
         // 2️⃣ 好友邀請
-        let customRequestType: FriendAPIDataType = .friendWithInvitingList
+        let customRequestType: FriendAPIDataType = .noInvitingList
         self.input.send(.fetchFriends(type: customRequestType))
         
         // 3️⃣ 好友列表
