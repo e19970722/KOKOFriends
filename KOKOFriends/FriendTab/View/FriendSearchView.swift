@@ -1,17 +1,20 @@
 //
-//  InvitedFriendView.swift
+//  FriendSearchView.swift
 //  KOKOFriends
 //
-//  Created by Yen Lin on 2025/5/22.
+//  Created by Yen Lin on 2025/5/24.
 //
 
 import UIKit
+import Combine
 
-class InvitedFriendView: UIView {
-    
+class FriendSearchView: UIView {
+
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var searchBackgroundView: UIView!
+    @IBOutlet weak var textField: UITextField!
+    
+    var cancellables = Set<AnyCancellable>()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,9 +29,9 @@ class InvitedFriendView: UIView {
     }
 
     private func loadFromNib() {
-        let nib = UINib(nibName: "InvitedFriendView", bundle: nil)
+        let nib = UINib(nibName: "FriendSearchView", bundle: nil)
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
-
+        view.backgroundColor = .clear
         self.contentView = view
         self.addSubview(contentView)
         contentView.frame = self.bounds
@@ -36,8 +39,8 @@ class InvitedFriendView: UIView {
     }
     
     private func setupUI() {
-        
-        
+        self.searchBackgroundView.layer.cornerRadius = 10
+        self.searchBackgroundView.clipsToBounds = true
     }
 
 }

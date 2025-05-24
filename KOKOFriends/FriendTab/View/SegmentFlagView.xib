@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SegmentFlagView" customModule="KOKOFriends" customModuleProvider="target">
+            <connections>
+                <outlet property="bottomLineView" destination="rtS-FA-nZq" id="Sef-Hz-v9z"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="Qhy-DT-tE5"/>
+                <outlet property="flagLabel" destination="2Eg-Lc-j8a" id="Lhb-s9-0aS"/>
+                <outlet property="titleLabel" destination="o4n-uR-733" id="P4v-24-ga0"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="90" height="38"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="9SH-gy-vHW">
+                    <rect key="frame" x="0.0" y="9" width="26" height="28"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="好友" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4n-uR-733">
+                            <rect key="frame" x="0.0" y="0.0" width="26" height="18"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <color key="textColor" name="lightGrey"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rtS-FA-nZq">
+                            <rect key="frame" x="3" y="24" width="20" height="4"/>
+                            <color key="backgroundColor" name="hotPink"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="rtS-FA-nZq" secondAttribute="height" multiplier="20:4" id="9Cd-T7-xgA"/>
+                                <constraint firstAttribute="height" constant="4" id="a2O-b5-Bns"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="NzR-9n-zFe"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Eg-Lc-j8a" customClass="FlagLabel" customModule="KOKOFriends" customModuleProvider="target">
+                    <rect key="frame" x="29" y="0.0" width="23.666666666666671" height="18"/>
+                    <color key="backgroundColor" name="veryLightPink"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="18" id="1K9-z8-6sy"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="2Eg-Lc-j8a" firstAttribute="leading" secondItem="9SH-gy-vHW" secondAttribute="trailing" constant="3" id="2eW-eB-q03"/>
+                <constraint firstItem="9SH-gy-vHW" firstAttribute="top" secondItem="2Eg-Lc-j8a" secondAttribute="top" constant="9" id="BwV-GP-ocF"/>
+                <constraint firstItem="9SH-gy-vHW" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Vqx-QR-wCQ"/>
+                <constraint firstItem="2Eg-Lc-j8a" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="WDg-ar-rlY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-302.29007633587787" y="-232.3943661971831"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="hotPink">
+            <color red="0.92549019607843142" green="0.0" blue="0.5490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lightGrey">
+            <color red="0.27843137254901962" green="0.27843137254901962" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="veryLightPink">
+            <color red="0.97647058823529409" green="0.69803921568627447" blue="0.86274509803921573" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

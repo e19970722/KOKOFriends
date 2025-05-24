@@ -1,18 +1,22 @@
 //
-//  FriendHeaderView.swift
+//  FriendMainInfoView.swift
 //  KOKOFriends
 //
-//  Created by Yen Lin on 2025/5/21.
+//  Created by Yen Lin on 2025/5/24.
 //
 
 import UIKit
+import Combine
 
-class FriendHeaderView: UIView {
+class FriendMainInfoView: UIView {
 
-    @IBOutlet weak var contentView: UIView!
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var statusView: UIView!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var statusLightView: UIView!
+    
+    private var cancellables = Set<AnyCancellable>()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,18 +31,17 @@ class FriendHeaderView: UIView {
     }
 
     private func loadFromNib() {
-        let nib = UINib(nibName: "FriendHeaderView", bundle: nil)
+        let nib = UINib(nibName: "FriendMainInfoView", bundle: nil)
         guard let view = nib.instantiate(withOwner: self, options: nil).first as? UIView else { return }
-
+        view.backgroundColor = .clear
         self.contentView = view
         self.addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     }
-    
+
     private func setupUI() {
-        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
-        self.statusLightView.layer.cornerRadius = self.statusLightView.frame.size.width / 2
-        
+        self.statusView.layer.cornerRadius = self.statusView.frame.size.height / 2
+        self.statusView.clipsToBounds = true
     }
 }

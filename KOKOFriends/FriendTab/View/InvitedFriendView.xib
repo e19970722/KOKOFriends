@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InvitedFriendView" customModule="KOKOFriends" customModuleProvider="target">
             <connections>
+                <outlet property="cardView" destination="l3N-9J-LUs" id="Pj5-vm-Mbs"/>
                 <outlet property="contentView" destination="iN0-l3-epB" id="t6i-d5-Ean"/>
                 <outlet property="imageView" destination="mGa-7h-L9M" id="qbo-uE-wY4"/>
                 <outlet property="nameLabel" destination="c11-0i-KJt" id="r00-kF-5RP"/>
@@ -21,6 +22,9 @@
             <rect key="frame" x="0.0" y="0.0" width="342" height="101"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l3N-9J-LUs">
+                    <rect key="frame" x="0.0" y="0.0" width="342" height="101"/>
+                </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ZzL-8e-4Kc">
                     <rect key="frame" x="15" y="15" width="312" height="54"/>
                     <subviews>
@@ -70,9 +74,13 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="l3N-9J-LUs" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="3O3-EH-YH0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l3N-9J-LUs" secondAttribute="trailing" id="3ry-XW-XKJ"/>
+                <constraint firstItem="l3N-9J-LUs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5qy-fB-ZhG"/>
                 <constraint firstItem="ZzL-8e-4Kc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="6VE-B1-Z4D"/>
                 <constraint firstAttribute="trailing" secondItem="ZzL-8e-4Kc" secondAttribute="trailing" constant="15" id="F2J-Y6-hbg"/>
                 <constraint firstItem="ZzL-8e-4Kc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="Jdd-CK-DPP"/>
+                <constraint firstAttribute="bottom" secondItem="l3N-9J-LUs" secondAttribute="bottom" id="v2U-jZ-rDq"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="-873.28244274809151" y="-315.84507042253523"/>

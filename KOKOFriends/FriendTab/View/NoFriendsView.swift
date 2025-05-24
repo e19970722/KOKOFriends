@@ -46,6 +46,11 @@ class NoFriendsView: UIView {
     private func setupUI() {
         self.addFriendBtn.layer.cornerRadius = 20
         self.addFriendBtn.clipsToBounds = true
+        self.addFriendBtn.layer.masksToBounds = false
+        self.addFriendBtn.layer.shadowRadius = 8
+        self.addFriendBtn.layer.shadowOpacity = 0.12
+        self.addFriendBtn.layer.shadowColor = UIColor.appleGreen40.cgColor
+        self.addFriendBtn.layer.shadowOffset = CGSize(width: 0 , height: 8)
         
         let setIDBtnAttributes: [NSAttributedString.Key: Any] = [
             .underlineStyle: NSUnderlineStyle.single.rawValue,
